@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>
+  <div class="result-container">
+    <div class="result-box">
+      <h2>Prediction Result</h2>
+      <p><strong>Name:</strong> {{ name }}</p>
+      <p><strong>Age:</strong> {{ age }}</p>
+      <p><strong>Gender:</strong> {{ gender }}</p>
+
+      <div class="status {{ 'positive' if prediction == 'Positive' else 'negative' }}">
+        <h3>Result : {{ prediction }} </h3>
+      </div>
+
+      
+
+      <div class="button-group">
+        <a class="btn" href="/predict">Check Again</a>
+        <a class="btn download-btn" href="/download" target="_blank">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

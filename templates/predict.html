@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medical Details - Heart Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}">
+</head>
+<body>
+  <div class="outer-container">
+    <div class="form-box">
+      <h2>Enter Your Medical Details</h2>
+      <form action="/predict" method="post">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              Age
+              <span class="info-icon" title="Enter your age in years.">ⓘ</span>
+            </label>
+            <input type="number" name="age" required>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Gender
+              <span class="info-icon" title="1 for Male, 0 for Female.">ⓘ</span>
+            </label>
+            <select name="male" required>
+              <option value="" disabled selected>-- Select Gender --</option>
+              <option value="1">Male</option>
+              <option value="0">Female</option>
+              <option value="0">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Education Level
+              <span class="info-icon" title="1: Primary, 2: Secondary, 3: Undergraduate, 4: Postgraduate">ⓘ</span>
+            </label>
+            <input type="number" name="education" min="1" max="4" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              Current Smoker
+              <span class="info-icon" title="Do you currently smoke? Yes = 1, No = 0">ⓘ</span>
+            </label>
+            <select name="currentSmoker" required>
+              <option value="" disabled selected>-- Select --</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Cigarettes Per Day
+              <span class="info-icon" title="Average number of cigarettes smoked daily.">ⓘ</span>
+            </label>
+            <input type="number" name="cigsPerDay" required>
+          </div>
+
+          <div class="form-group">
+            <label>
+              On BP Medication
+              <span class="info-icon" title="Are you taking medicine for blood pressure?">ⓘ</span>
+            </label>
+            <select name="BPMeds" required>
+              <option value="" disabled selected>-- Select --</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              History of Stroke
+              <span class="info-icon" title="Have you ever had a stroke?">ⓘ</span>
+            </label>
+            <select name="prevalentStroke" required>
+              <option value="" disabled selected>-- Select --</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Hypertension
+              <span class="info-icon" title="Have you been diagnosed with high blood pressure?">ⓘ</span>
+            </label>
+            <select name="prevalentHyp" required>
+              <option value="" disabled selected>-- Select --</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Diabetes
+              <span class="info-icon" title="Do you have diabetes? Yes = 1, No = 0">ⓘ</span>
+            </label>
+            <select name="diabetes" required>
+              <option value="" disabled selected>-- Select --</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              Total Cholesterol
+              <span class="info-icon" title="Normal: < 200 mg/dL, Borderline: 200–239, High: ≥ 240">ⓘ</span>
+            </label>
+            <input type="number" name="totChol" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Systolic BP
+              <span class="info-icon" title="Top number: pressure during heartbeats. Normal: < 120">ⓘ</span>
+            </label>
+            <input type="number" name="sysBP" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Diastolic BP
+              <span class="info-icon" title="Lower number. Normal: < 80 mm Hg">ⓘ</span>
+            </label>
+            <input type="number" name="diaBP" min="0" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>
+              BMI
+              <span class="info-icon" title="Normal: 18.5–24.9, Overweight: 25–29.9">ⓘ</span>
+            </label>
+            <input type="number" name="BMI" step="0.1" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Heart Rate
+              <span class="info-icon" title="Normal resting heart rate: 60–100 bpm">ⓘ</span>
+            </label>
+            <input type="number" name="heartRate" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label>
+              Glucose
+              <span class="info-icon" title="Normal: < 100 mg/dL, Prediabetes: 100–125, Diabetes: ≥ 126">ⓘ</span>
+            </label>
+            <input type="number" name="glucose" min="0" required>
+          </div>
+        </div>
+
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

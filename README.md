@@ -5,6 +5,8 @@ This project predicts the risk of heart disease based on user medical details us
 
 ## Screenshots
 ![Screenshot 2025-06-28 114208](https://github.com/user-attachments/assets/b4f1e7cf-f45d-493e-97e8-5b3f576bc6fc)
+
+
 ![Screenshot 2025-06-28 114436](https://github.com/user-attachments/assets/f1874ab1-e5c2-4ade-a726-4fc37226f23c)
 
 ## Features

@@ -4,7 +4,8 @@ This project predicts the risk of heart disease based on user medical details us
 **Framingham Heart Study dataset**. The app is built using **Flask**, **Random Forest**, and provides a user-friendly interface for predictions.
 
 ## Screenshots
-![Screenshot 2025-06-27 225959](https://github.com/user-attachments/assets/daa48eb8-48bc-46ca-bb0f-bd057a25467b)
+![Screenshot 2025-06-28 114436](https://github.com/user-attachments/assets/4d764bd7-941c-49a5-bee4-c169db00da70)
+
 
 ## Features
 - Enter personal and medical details

@@ -34,11 +34,8 @@ The model uses the following personal and medical details:
 - Heart Rate
 - Glucose level
 
-## Author
 
-**Santoshi Lakkoju**  
-B.Tech CSE (AIML) – VNRVJIET    
-[LinkedIn](https://www.linkedin.com/in/santoshi-l-059baa267)
+
 
 
 
